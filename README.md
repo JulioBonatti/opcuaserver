@@ -1,6 +1,18 @@
 node-opcua-sampleserver
 =======================
 
-A simple OPC-UA server based on node-opcua
+Two opcua servers.
+
+npm install 
+
+To start non certificated communication, run:
+
+npm run start
+
+to start certificated one, run:
+
+npm run start2
+
+
 
 

@@ -1,17 +1,15 @@
-node-opcua-sampleserver
-=======================
+# Two opcua example servers
 
-Two opcua servers.
+* Dependecies:
+`npm install` 
 
-npm install 
+* To start non certificated communication, run:
 
-To start non certificated communication, run:
+`npm run start`
 
-npm run start
+* To start certificated one, run:
 
-to start certificated one, run:
-
-npm run start2
+`npm run start2`
 
 
 

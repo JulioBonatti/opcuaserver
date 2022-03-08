@@ -84,6 +84,36 @@ function constructAddressSpace(server) {
             }
         }
     });
+    const yudiDevice = namespace.addFolder("ObjectsFolder", {
+        browseName: "Yuber"
+    });
+    let boolYudi = true;
+    let sine = 0;
+    setInterval(()=>{boolYudi=!boolYudi;}, 1000);
+    setInterval(()=>{sine+=0.1;}, 500);
+
+    namespace.addVariable({
+        componentOf: yudiDevice,
+        nodeId: "s=pardola",
+        browseName: "Play",
+        dataType: "Boolean",
+        value: {
+            get: () => {
+                return new Variant({dataType: DataType.Boolean, value: boolYudi });
+            }
+        }
+    });
+    namespace.addVariable({
+        componentOf: yudiDevice,
+        nodeId: "i=1010",
+        browseName: "SinePlay",
+        dataType: "Double",
+        value: {
+            get: () => {
+                return new Variant({dataType: DataType.Double, value: Math.sin(sine) });
+            }
+        }
+    });
 
     // please 
 }
